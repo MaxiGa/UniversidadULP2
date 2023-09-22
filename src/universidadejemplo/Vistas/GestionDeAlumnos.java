@@ -47,8 +47,8 @@ public class GestionDeAlumnos extends javax.swing.JInternalFrame {
         jTapellido = new javax.swing.JTextField();
         jTnombre = new javax.swing.JTextField();
         jbBuscar = new javax.swing.JButton();
-        jdFechaN = new com.toedter.calendar.JDateChooser();
         jrActiv = new javax.swing.JRadioButton();
+        jdFechaN = new com.toedter.calendar.JDateChooser();
 
         setClosable(true);
         setIconifiable(true);
@@ -119,8 +119,8 @@ public class GestionDeAlumnos extends javax.swing.JInternalFrame {
         jDesktopPane1.setLayer(jTapellido, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jDesktopPane1.setLayer(jTnombre, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jDesktopPane1.setLayer(jbBuscar, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jDesktopPane1.setLayer(jdFechaN, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jDesktopPane1.setLayer(jrActiv, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jDesktopPane1.setLayer(jdFechaN, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout jDesktopPane1Layout = new javax.swing.GroupLayout(jDesktopPane1);
         jDesktopPane1.setLayout(jDesktopPane1Layout);
@@ -159,11 +159,12 @@ public class GestionDeAlumnos extends javax.swing.JInternalFrame {
                                 .addGroup(jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addComponent(jTapellido, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jTnombre, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jrActiv, javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jdFechaN, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addContainerGap(19, Short.MAX_VALUE))
+                                    .addComponent(jrActiv, javax.swing.GroupLayout.Alignment.LEADING))))
+                        .addContainerGap(20, Short.MAX_VALUE))
                     .addGroup(jDesktopPane1Layout.createSequentialGroup()
                         .addComponent(jLabel6)
+                        .addGap(30, 30, 30)
+                        .addComponent(jdFechaN, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE))))
         );
         jDesktopPane1Layout.setVerticalGroup(
@@ -188,11 +189,11 @@ public class GestionDeAlumnos extends javax.swing.JInternalFrame {
                 .addGroup(jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
                     .addComponent(jrActiv))
-                .addGap(18, 18, 18)
+                .addGap(14, 14, 14)
                 .addGroup(jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel6)
                     .addComponent(jdFechaN, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 77, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 81, Short.MAX_VALUE)
                 .addGroup(jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jBnuevo)
                     .addComponent(jBeliminar)
