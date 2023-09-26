@@ -103,6 +103,8 @@ public class Universidad {
 //        Inscripcion i1 = new Inscripcion(5.5, pedro, mate);
 //        id.guardarInscripcion(i1);
 
+id.obtenerMateriasNoCursadas(1);
+
 //       Alumno caroR = alu.buscarAlumno(8);
 //        Materia lit = mat.buscarMateria(3);
 //        Inscripcion i2 = new Inscripcion(7.8, caroR, lit);
@@ -113,13 +115,12 @@ public class Universidad {
 //        Inscripcion i3 = new Inscripcion(9.2, ricardo, geo);
 //        id.guardarInscripcion(i3);
 //        
-//       Alumno jav = alu.buscarAlumno(5);
+//       Alumno jav 1= alu.buscarAlumno(5);
 //        Materia tec = mat.buscarMateria(2);
 //        Inscripcion i4 = new Inscripcion(8.5, jav, tec);
 //        id.guardarInscripcion(i4);
 //        
-        Alumno ana = alu.buscarAlumno(6);
-        Materia dc = mat.buscarMateria(5);
+        
 //        Inscripcion i5 = new Inscripcion(9, ana, dc);
 //        id.guardarInscripcion(i5);
 //        

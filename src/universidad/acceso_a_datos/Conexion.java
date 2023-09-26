@@ -2,6 +2,8 @@
 package universidad.acceso_a_datos;
 
 import java.sql.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import javax.swing.JOptionPane;
 
@@ -13,7 +15,7 @@ public class Conexion {
     private static String PASSWORD = "";
     private static Connection connection;
     
-    private Conexion(){
+    public Conexion(){
         
     }
     
@@ -35,5 +37,9 @@ public class Conexion {
         }
         return connection;
     } 
+
+ 
+    
+    
             
 }

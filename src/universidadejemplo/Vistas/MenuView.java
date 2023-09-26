@@ -4,6 +4,8 @@
  */
 package universidadejemplo.Vistas;
 
+
+
 /**
  *
  * @author carol
@@ -33,13 +35,13 @@ public class MenuView extends javax.swing.JFrame {
         jmFormMat = new javax.swing.JMenu();
         jMIformMat = new javax.swing.JMenuItem();
         jMenu3 = new javax.swing.JMenu();
-        jMIinscripciones = new javax.swing.JMenuItem();
-        jMInotas = new javax.swing.JMenuItem();
+        jmInscripciones = new javax.swing.JMenuItem();
+        jmNotas = new javax.swing.JMenuItem();
         jMenu4 = new javax.swing.JMenu();
-        jMIalumXmat = new javax.swing.JMenuItem();
-        jMenu5 = new javax.swing.JMenu();
+        jmAlumnos = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Universidad La Punta Administracion");
 
         javax.swing.GroupLayout jDEscritorioLayout = new javax.swing.GroupLayout(jDEscritorio);
         jDEscritorio.setLayout(jDEscritorioLayout);
@@ -86,25 +88,36 @@ public class MenuView extends javax.swing.JFrame {
         jMenu3.setText("Administracion");
         jMenu3.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
 
-        jMIinscripciones.setText("Manejo de Inscripciones");
-        jMenu3.add(jMIinscripciones);
+        jmInscripciones.setText("Manejo de Inscripciones");
+        jmInscripciones.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmInscripcionesActionPerformed(evt);
+            }
+        });
+        jMenu3.add(jmInscripciones);
 
-        jMInotas.setText("Manipulacion de Notas");
-        jMenu3.add(jMInotas);
+        jmNotas.setText("Manipulacion de Notas");
+        jmNotas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmNotasActionPerformed(evt);
+            }
+        });
+        jMenu3.add(jmNotas);
 
         jMenuBar1.add(jMenu3);
 
         jMenu4.setText("Consultas");
         jMenu4.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
 
-        jMIalumXmat.setText("Alumnos por Materia");
-        jMenu4.add(jMIalumXmat);
+        jmAlumnos.setText("Alumnos por Materia");
+        jmAlumnos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmAlumnosActionPerformed(evt);
+            }
+        });
+        jMenu4.add(jmAlumnos);
 
         jMenuBar1.add(jMenu4);
-
-        jMenu5.setText("Salir");
-        jMenu5.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jMenuBar1.add(jMenu5);
 
         setJMenuBar(jMenuBar1);
 
@@ -148,6 +161,36 @@ public class MenuView extends javax.swing.JFrame {
         jDEscritorio.moveToFront(gdm);
     }//GEN-LAST:event_jMIformMatActionPerformed
 
+    private void jmInscripcionesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmInscripcionesActionPerformed
+        // TODO add your handling code here:
+      jDEscritorio.removeAll();
+        jDEscritorio.repaint();
+        Inscripciones ins = new Inscripciones();
+        ins.setVisible(true);
+         jDEscritorio.add(ins);
+        jDEscritorio.moveToFront(ins);
+    }//GEN-LAST:event_jmInscripcionesActionPerformed
+
+    private void jmAlumnosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmAlumnosActionPerformed
+        // TODO add your handling code here:
+        jDEscritorio.removeAll();
+        jDEscritorio.repaint();
+        AlumnosPorMateria aluMat = new AlumnosPorMateria();
+        aluMat.setVisible(true);
+        jDEscritorio.add(aluMat);
+        jDEscritorio.moveToFront(aluMat);
+    }//GEN-LAST:event_jmAlumnosActionPerformed
+
+    private void jmNotasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmNotasActionPerformed
+        // TODO add your handling code here:
+         jDEscritorio.removeAll();
+        jDEscritorio.repaint();
+        ActualizacionDeNotas notas = new ActualizacionDeNotas();
+        notas.setVisible(true);
+         jDEscritorio.add(notas);
+        jDEscritorio.moveToFront(notas);
+    }//GEN-LAST:event_jmNotasActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -185,16 +228,15 @@ public class MenuView extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JDesktopPane jDEscritorio;
-    private javax.swing.JMenuItem jMIalumXmat;
     private javax.swing.JMenuItem jMIformMat;
-    private javax.swing.JMenuItem jMIinscripciones;
-    private javax.swing.JMenuItem jMInotas;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenu jMenu4;
-    private javax.swing.JMenu jMenu5;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jmAlumnos;
     private javax.swing.JMenuItem jmFormAlum;
     private javax.swing.JMenu jmFormMat;
+    private javax.swing.JMenuItem jmInscripciones;
+    private javax.swing.JMenuItem jmNotas;
     // End of variables declaration//GEN-END:variables
 }
