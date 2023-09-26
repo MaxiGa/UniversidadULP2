@@ -1,4 +1,5 @@
 
+
 package universidad.entidades;
 
 import java.time.LocalDate;
@@ -82,7 +83,7 @@ public class Alumno {
 
     @Override
     public String toString() {
-        return dni + ", " + nombre + "." ;
+        return dni + ", " + nombre + ", " + apellido;
     }
 
    

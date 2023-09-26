@@ -39,6 +39,8 @@ public class AlumnoData {
             if (rs.next()) {
                 alumno.setIdAlumno(rs.getInt(1));
                 JOptionPane.showMessageDialog(null, "Alumno Guardado");
+            }else{
+                JOptionPane.showMessageDialog(null, "Alumno No puede registrar un mismo dni");
             }
             ps.close();
 
@@ -63,6 +65,7 @@ public class AlumnoData {
             if (filas == 1) {
                 JOptionPane.showMessageDialog(null, "Alumno Modificado");
 
+            
             }
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, "Error al acceder a la tabla Alumno");
@@ -135,10 +138,7 @@ public class AlumnoData {
                 alumno.setFechaNac(rs.getDate("fechaNacimiento").toLocalDate());
                 alumno.setActivo(true);
 
-            } else {
-                JOptionPane.showMessageDialog(null, "Alumno inexistente");
-
-            }
+            } 
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, "Error al acceder a la tabla alumnos");
         }

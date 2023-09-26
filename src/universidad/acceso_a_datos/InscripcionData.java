@@ -1,5 +1,6 @@
 package universidad.acceso_a_datos;
 
+
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -116,9 +117,10 @@ public class InscripcionData {
 
         List<Materia> materias = new ArrayList<>();
 
-         String sql = "SELECT inscripcion.idMateria,nombre,anio"
+        String sql = "SELECT inscripcion.idMateria,nombre,anio"
                     + " FROM inscripcion,materia "
                     + "WHERE inscripcion.idMateria = materia.idMateria AND inscripcion.idAlumno=? ";
+
         try {
             PreparedStatement ps = con.prepareStatement(sql);
             ps.setInt(1, idAlumno);
@@ -224,9 +226,9 @@ public class InscripcionData {
 
         List<Alumno> alumMat = new ArrayList<>();
 
-        String sql = "SELECT alumno.idAlumno, dni, nombre, apellido, fechaNacimiento, estado"
-                + "FROM inscripcion , alumno  WHERE inscripcion.idAlumno = alumno.idAlumno"
-                + "AND idMateria = ? AND  alumno.estado = 1";
+        String sql = "SELECT alumno.idAlumno, dni, nombre, apellido, estado"
+                + " FROM inscripcion , alumno  WHERE inscripcion.idAlumno = alumno.idAlumno"
+                + " AND idMateria = ? AND  alumno.estado = 1";
 
         try {
             PreparedStatement ps = con.prepareStatement(sql);
@@ -236,9 +238,9 @@ public class InscripcionData {
             while (rs.next()) {
                 Alumno alum = new Alumno();
                 alum.setIdAlumno(rs.getInt("idAlumno"));
+                alum.setDni(rs.getInt("dni"));
                 alum.setApellido(rs.getString("apellido"));
                 alum.setNombre(rs.getString("nombre"));
-                alum.setFechaNac(rs.getDate("fechaNacimiento").toLocalDate());
                 alum.setActivo(rs.getBoolean("estado"));
 
                 alumMat.add(alum);
