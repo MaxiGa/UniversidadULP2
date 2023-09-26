@@ -57,7 +57,7 @@ public class GestionDeMaterias extends javax.swing.JInternalFrame {
             }
         });
 
-        jbNuevo.setText("Modificar");
+        jbNuevo.setText("MODIFICAR");
         jbNuevo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbNuevoActionPerformed(evt);
@@ -123,7 +123,7 @@ public class GestionDeMaterias extends javax.swing.JInternalFrame {
                                 .addGroup(jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addComponent(jLabel2)
                                     .addComponent(jLabel3))
-                                .addGap(3, 435, Short.MAX_VALUE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addGroup(jDesktopPane1Layout.createSequentialGroup()
                                 .addComponent(jLabel5)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
