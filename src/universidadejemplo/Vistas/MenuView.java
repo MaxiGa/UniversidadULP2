@@ -60,11 +60,11 @@ public class MenuView extends javax.swing.JFrame {
         jDEscritorio.setLayout(jDEscritorioLayout);
         jDEscritorioLayout.setHorizontalGroup(
             jDEscritorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 682, Short.MAX_VALUE)
+            .addGap(0, 737, Short.MAX_VALUE)
         );
         jDEscritorioLayout.setVerticalGroup(
             jDEscritorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 591, Short.MAX_VALUE)
+            .addGap(0, 666, Short.MAX_VALUE)
         );
 
         jMenu1.setText("Alumnos");
@@ -138,11 +138,13 @@ public class MenuView extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jDEscritorio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jDEscritorio))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jDEscritorio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jDEscritorio)
         );
 
         pack();
